@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Trọng Tấn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="giaodien.css" />
+  <link rel="icon" href="https://i.postimg.cc/KzZwxch4/Chat-GPT-Image-22-57-14-5-thg-6-2025.png"/>
+
+</head>
+<body>
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="https://files.catbox.moe/sd8pkk.mp4" type="video/mp4">
+  </video>
+  <!-- Top Navigation -->
+  <div class="top-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <div class="logo">
+          <div class="logo-icon"><img src="https://i.postimg.cc/KzZwxch4/Chat-GPT-Image-22-57-14-5-thg-6-2025.png" alt="Logo" /></div>
+          CTT SHOP
+        </div>
+        <div class="nav-menu">
+          <a href="#" class="nav-item active">Trang chủ</a>
+          <a href="#" class="nav-item">Hồ sơ</a>
+          <a href="#" class="nav-item">Bộ sưu tập</a>
+          <a href="#" class="nav-item">ĐTCL</a>
+        </div>
+      </div>
+      <div class="nav-right">
+        <div class="currency">
+          <span class="currency-icon">💎</span>
+          <span>1289</span>
+        </div>
+        <div class="currency">
+          <span class="currency-icon">🏆</span>
+          <span>0</span>
+        </div>
+        <div class="user-info">
+          <div class="user-avatar">CT</div>
+          <span>Tài Khoản</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <div class="page-header">
+      <h1 class="page-title">Trọng Tấn Shoe Store</h1>
+      <p class="page-subtitle">Explore the diverse and high-quality shoe collection.</p>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="category-tabs">
+      <div class="tab active">Tất cả sản phẩm</div>
+      <div class="tab">Giày thể thao</div>
+      <div class="tab">Giày cao gót</div>
+      <div class="tab">Giày da</div>
+      <div class="tab">Dép sandal</div>
+    </div>
+
+    <!-- Special Offers -->
+    <div class="special-offers">
+      <div class="offers-grid">
+        <div class="offer-card">
+          <div class="offer-title">🔥 Khuyến mãi đặc biệt</div>
+          <div class="offer-desc">Giảm giá lên đến 50% cho các sản phẩm hot nhất</div>
+        </div>
+        <div class="offer-card">
+          <div class="offer-title">⚡ Mua 2 tặng 1</div>
+          <div class="offer-desc">Áp dụng cho tất cả giày thể thao cao cấp</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid">
+      <!-- Nike Air Max -->
+      <div class="product-card" onclick="openInvoice(1)">
+        <div class="product-image">
+          <img src="https://i.postimg.cc/tCT17FNN/OIP.jpg" alt="Nike Air Max 270" />
+          <div class="product-badge">HOT</div>
+          <div class="product-price-badge">
+            💎 2,500,000
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-type">Giày thể thao</div>
+          <div class="product-name">Nike Air Max 270 - Phiên bản đặc biệt</div>
+          <div class="product-price">
+            💎 2,500,000 VNĐ
+            <span class="discount-badge">-20%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Adidas Ultraboost -->
+      <div class="product-card" onclick="openInvoice(2)">
+        <div class="product-image">
+          <img src="https://i.postimg.cc/50fxFMLF/OIP-1.jpg" alt="Adidas Ultraboost 22" />
+          <div class="product-badge">NEW</div>
+          <div class="product-price-badge">
+            💎 2,800,000
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-type">Giày chạy bộ</div>
+          <div class="product-name">Adidas Ultraboost 22 - Công nghệ mới nhất</div>
+          <div class="product-price">
+            💎 2,800,000 VNĐ
+          </div>
+        </div>
+      </div>
+
+      <!-- Gucci Loafers -->
+      <div class="product-card" onclick="openInvoice(3)">
+        <div class="product-image">
+          <img src="https://i.postimg.cc/fR4kTp2Y/920fd4d26a3438bbc1e2fc543852f309.jpg" alt="Gucci Leather Loafers" />
+          <div class="product-badge">LUXURY</div>
+          <div class="product-price-badge">
+            💎 15,000,000
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-type">Giày da cao cấp</div>
+          <div class="product-name">Gucci Leather Loafers - Sang trọng đẳng cấp</div>
+          <div class="product-price">
+            💎 15,000,000 VNĐ
+          </div>
+        </div>
+      </div>
+
+      <!-- Christian Louboutin -->
+      <div class="product-card" onclick="openInvoice(4)">
+        <div class="product-image">
+          <img src="https://i.postimg.cc/7ZW4Z2Yd/OIP-2.jpg" alt="Christian Louboutin Red Sole" />
+          <div class="product-badge">VIP</div>
+          <div class="product-price-badge">
+            💎 25,000,000
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-type">Giày cao gót</div>
+          <div class="product-name">Christian Louboutin Red Sole - Biểu tượng thời trang</div>
+          <div class="product-price">
+            💎 25,000,000 VNĐ
+            <span class="discount-badge">-10%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Converse Chuck Taylor -->
+      <div class="product-card" onclick="openInvoice(5)">
+        <div class="product-image">
+          <img src="https://i.postimg.cc/Xvs29Tzz/b4799a8f363f351245ea3e0d532502f3.jpg" alt="Converse Chuck Taylor All Star" />
+          <div class="product-badge">CLASSIC</div>
+          <div class="product-price-badge">
+            💎 1,200,000
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-type">Giày canvas</div>
+          <div class="product-name">Converse Chuck Taylor All Star - Phong cách cổ điển</div>
+          <div class="product-price">
+            💎 1,200,000 VNĐ
+          </div>
+        </div>
+      </div>
+
+      <!-- Vans Old Skool -->
+      <div class="product-card" onclick="openInvoice(6)">
+        <div class="product-image">
+          <img src="https://i.postimg.cc/zDCgMnJJ/4a116d33456ac42d8c03306683879f4d.jpg" alt="Vans Old Skool" />
+          <div class="product-badge">STREET</div>
+          <div class="product-price-badge">
+            💎 1,800,000
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-type">Giày skate</div>
+          <div class="product-name">Vans Old Skool - Phong cách đường phố</div>
+          <div class="product-price">
+            💎 1,800,000 VNĐ
+            <span class="discount-badge">-15%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Balenciaga Triple S -->
+      <div class="product-card" onclick="openInvoice(7)">
+        <div class="product-image">
+          <img src="https://i.postimg.cc/Xv4hfK7p/S62eb9723980c4a91a10d1f008350be4a-X.jpg" alt="Balenciaga Triple S" />
+          <div class="product-badge">TRENDING</div>
+          <div class="product-price-badge">
+            💎 22,000,000
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-type">Giày designer</div>
+          <div class="product-name">Balenciaga Triple S - Xu hướng thời thượng</div>
+          <div class="product-price">
+            💎 22,000,000 VNĐ
+          </div>
+        </div>
+      </div>
+
+      <!-- Birkenstock -->
+      <div class="product-card" onclick="openInvoice(8)">
+        <div class="product-image">
+          <img src="https://i.postimg.cc/8PFjGMGJ/OIP-3.jpg" alt="Birkenstock Arizona" />
+          <div class="product-badge">COMFORT</div>
+          <div class="product-price-badge">
+            💎 3,500,000
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-type">Dép cao cấp</div>
+          <div class="product-name">Birkenstock Arizona - Thoải mái tối đa</div>
+          <div class="product-price">
+            💎 3,500,000 VNĐ
+            <span class="discount-badge">-25%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Invoice Modal -->
+  <div class="modal" id="invoiceModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🧾 Hóa đơn thanh toán</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="product-details">
+                    <img id="modalProductImage" class="product-image-large" src="" alt="">
+                    
+                    <div class="detail-item">
+                        <div class="detail-label">Sản phẩm</div>
+                        <div class="detail-value" id="modalProductName"></div>
+                    </div>
+
+                    <div class="detail-item">
+                        <div class="detail-label">Danh mục</div>
+                        <div class="detail-value" id="modalProductCategory"></div>
+                    </div>
+
+                    <div class="detail-item">
+                        <div class="detail-label">Giá gốc</div>
+                        <div class="detail-value" id="modalProductPrice"></div>
+                    </div>
+
+                    <div class="options-group">
+                        <label class="option-label">Chọn size:</label>
+                        <select class="option-select" id="sizeSelect" onchange="updateTotal()">
+                            <option value="36">Size 36</option>
+                            <option value="37">Size 37</option>
+                            <option value="38">Size 38</option>
+                            <option value="39">Size 39</option>
+                            <option value="40">Size 40</option>
+                            <option value="41">Size 41</option>
+                            <option value="42">Size 42</option>
+                            <option value="43">Size 43</option>
+                        </select>
+                    </div>
+
+                    <div class="options-group">
+                        <label class="option-label">Chọn màu sắc:</label>
+                        <select class="option-select" id="colorSelect" onchange="updateTotal()">
+                            <option value="Đen">Đen</option>
+                            <option value="Trắng">Trắng</option>
+                            <option value="Đỏ">Đỏ</option>
+                            <option value="Xanh">Xanh</option>
+                            <option value="Vàng">Vàng</option>
+                            <option value="Nâu">Nâu</option>
+                        </select>
+                    </div>
+
+                    <div class="options-group">
+                        <label class="option-label">Số lượng:</label>
+                        <select class="option-select" id="quantitySelect" onchange="updateTotal()">
+                            <option value="1">1 đôi</option>
+                            <option value="2">2 đôi</option>
+                            <option value="3">3 đôi</option>
+                            <option value="4">4 đôi</option>
+                            <option value="5">5 đôi</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="qr-section">
+                    <h3>💳 Thanh toán QR Code</h3>
+                    <div class="qr-code" id="qrCode">
+                        <div style="text-align: center; color: #333;">
+                            <div style="font-size: 3rem;">📱</div>
+                            <div style="font-size: 0.9rem; margin-top: 10px;">QR Code sẽ được tạo tự động</div>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-info">
+                        <div><strong>🏦 Ngân hàng:</strong> Vietcombank</div>
+                        <div><strong>📋 STK:</strong> 1234567890</div>
+                        <div><strong>👤 Chủ TK:</strong> Trọng Tấn Store</div>
+                        <div><strong>💬 Nội dung:</strong> <span id="transferContent"></span></div>
+                    </div>
+
+                    <div class="total-price" id="totalPrice">0 VNĐ</div>
+
+                    <button class="confirm-btn" onclick="confirmOrder()">
+                        ✅ Xác nhận đặt hàng
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<script src="giaodien.js"></script>
+</body>
+</html>
