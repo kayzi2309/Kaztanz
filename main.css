@@ -197,3 +197,21 @@ h1 {
   object-fit: cover;
   z-index: -1;
 }
+@media (max-width: 768px) {
+  .wrapper-container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .form-box, .image-box {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .image-box img {
+    height: auto;
+    max-height: 200px;
+  }
+}
