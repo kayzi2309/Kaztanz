@@ -15,46 +15,15 @@ body {
   background: #000;
   overflow: hidden;
 }
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px 0;
-  z-index: 10;
-}
-
-.navbar ul {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 20px;
-  list-style: none;
-}
-
-.navbar li {
-  margin-left: 20px;
-}
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 400;
-  transition: 0.3s;
-}
-
-.navbar a:hover {
-  color: #ccc;
-  border-bottom: 2px solid #fff;
-}
 
 /* Container */
 .wrapper-container {
   display: flex;
   justify-content: space-between;
-  width: 850px;
-  height: 550px;
-  margin-top: 80px;
+  width: 95%;
+  max-width: 850px;
+  height: auto;
+  margin: 80px auto 20px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   backdrop-filter: blur(15px);
