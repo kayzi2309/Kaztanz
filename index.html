@@ -1,79 +1,345 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shop Trọng Tấn</title>
-  <link rel="stylesheet" href="main.css" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
-  <link rel="icon" href="https://i.postimg.cc/KzZwxch4/Chat-GPT-Image-22-57-14-5-thg-6-2025.png"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhoneStoreT7 - Hệ thống bán lẻ điện thoại</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome 6 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+<script src="index.js" defer></script>
 </head>
 <body>
-  <video autoplay muted loop playsinline id="bg-video">
-    <source src="https://files.catbox.moe/w4hagf.mp4" type="video/mp4">
-  </video>
-  <!-- Main Container -->
-  <div class="wrapper-container" id="container">
-    <!-- Form Box -->
-    <div class="form-box">
-      <!-- Login Form -->
-      <form class="form login-form active" id="login-form">
-        <h1>Login</h1>
-        <div class="input-box">
-          <input type="text" id="login-username" placeholder="Username" required />
-          <i class="bx bxs-user"></i>
-        </div>
-        <div class="input-box">
-          <input type="password" id="login-password" placeholder="Password" required />
-          <i class="bx bxs-lock"></i>
-        </div>
-        <div class="remember-forgot">
-          <label><input type="checkbox" /> Remember me</label>
-          <a href="#">Forgot password?</a>
-        </div>
-        <button type="button" class="btn" onclick="loginUser()">Login</button>
-        <div class="register-link">
-          <p>Don't have an account? <a href="#" onclick="showRegister()">Register</a></p>
-        </div>
-      </form>
 
-      <!-- Register Form -->
-      <form class="form register-form" id="register-form">
-        <h1>Register</h1>
-        <div class="input-box">
-          <input type="text" id="register-username" placeholder="Username" required />
-          <i class="bx bxs-user"></i>
-        </div>
-        <div class="input-box">
-          <input type="password" id="register-password" placeholder="Password" required />
-          <i class="bx bxs-lock"></i>
-        </div>
-        <div class="input-box">
-          <input type="email" id="register-email" placeholder="Email" required />
-          <i class="bx bxs-envelope"></i>
-        </div>
-        <button type="button" class="btn" onclick="registerUser()">Register</button>
-        <div class="register-link">
-          <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
-        </div>
-        <div class="social-register">
-          <p>Or register with</p>
-          <div class="social-icons">
-            <a href="#"><i class="bx bxl-facebook-circle"></i></a>
-            <a href="#"><i class="bx bxl-google"></i></a>
-            <a href="#"><i class="bx bxl-apple"></i></a>
-          </div>
-        </div>
-      </form>
+<!-- TOP BAR -->
+<div class="top-bar">
+  <button class="nav-arrow">&#8249;</button>
+  <div class="top-bar-item">
+    <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+    SẢN PHẨM CHÍNH HÃNG
+  </div>
+  <div class="top-bar-item">
+    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 9h6v6H9z"/></svg>
+    CAM KẾT LỖI ĐỔI LIỀN (*)
+  </div>
+  <div class="top-bar-item">
+    <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+    HOTLINE 1900.2091
+  </div>
+  <div class="top-bar-item">
+    <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/><path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3z"/></svg>
+    MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC
+  </div>
+  <button class="nav-arrow">&#8250;</button>
+</div>
+
+<!-- HEADER -->
+<header>
+  <a class="logo" href="#">
+    <div class="logo-box">PST</div>
+    <span class="logo-text">Phone<span>Store</span>T7</span>
+  </a>
+  <div class="search-bar">
+    <input type="text" placeholder="Hôm nay bạn muốn tìm kiếm gì?">
+    <button>
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      Tìm kiếm
+    </button>
+  </div>
+  <div class="header-actions">
+    <div class="header-action">
+      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+      Tìm siêu thị
     </div>
-
-    <!-- Image Box -->
-    <div class="image-box">
-      <img src="https://i.postimg.cc/yx76Z33K/hinh-nen-lien-minh-huyen-thoai-67.jpg" alt="Side Image" />
+    <div id="authArea">
+      <a href="login.html" class="header-action">
+      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
+      </svg>
+      Tài khoản
+      </a>
+    </div>
+    <div class="header-action cart-wrapper">
+      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/></svg>
+      <div class="cart-badge" id="cart-count">0</div>
+      Giỏ hàng
     </div>
   </div>
+</header>
 
-  <!-- JavaScript -->
-  <script src="main.js"></script>
+<!-- TRENDING BAR -->
+<div class="trending-bar">
+  <span class="trending-label">Từ khóa xu hướng</span>
+  <span class="trending-tag active">Galaxy S26 Series</span>
+  <span class="trending-tag">iPhone 17</span>
+  <span class="trending-tag">Redmi Note 15</span>
+  <span class="trending-tag">OPPO Reno15</span>
+  <span class="trending-tag">MacBook Pro M5</span>
+  <span class="trending-tag">iPad 2025</span>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="main-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h3>Danh mục</h3>
+    <div id="sidebar-list"></div>
+  </aside>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <div class="Part2 my-4">
+        <div id="shoeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-inner">
+                <!-- Ảnh 1 -->
+                <div class="carousel-item active">
+                    <img src="https://image2url.com/r2/default/images/1772424458690-d221b027-e3e0-40b7-b6e3-d43fd5eedfbb.jpg" class="d-block w-100" alt="Anh 1">
+                </div>
+                <!-- Ảnh 2 -->
+                <div class="carousel-item">
+                    <img src="https://image2url.com/r2/default/images/1772424819951-e208f172-67da-46a9-8137-f584ae9e9da6.jpg" class="d-block w-100" alt="Anh 2">
+                </div>
+                <!-- Ảnh 3 -->
+                <div class="carousel-item">
+                    <img src="https://image2url.com/r2/default/images/1772424900171-727bf8f5-693c-4d3c-80cf-7bbe66fad31f.jpg" class="d-block w-100" alt="Anh 3">
+                </div>
+                <!-- Ảnh 4 -->
+                <div class="carousel-item">
+                    <img src="https://image2url.com/r2/default/images/1772425239351-5f4c5fd3-88df-4012-ad9e-ff3fa13c0d28.jpg" class="d-block w-100" alt="Anh 4">
+                </div>
+                <!-- Ảnh 5 -->
+                <div class="carousel-item">
+                    <img src="https://image2url.com/r2/default/images/1772525411294-28eeab5f-6f39-4d53-a535-0ed5b562f088.jpg" class="d-block w-100" alt="Anh 5">
+                </div>
+            </div>
+
+            <!-- Nút điều khiển -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#shoeCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#shoeCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+            <!-- PRODUCT TABS -->
+    <div class="product-tabs">
+      <div class="tabs-header">
+        <div class="tab-item active">Iphone 17 Series | Iphone AI..</div>
+        <div class="tab-item">Xiaomi 17 Ultra</div>
+        <div class="tab-item">Galaxy S25 FE | Galaxy AI</div>
+        <div class="tab-item">Macbook Pro</div>
+        <div class="tab-item">New Arrivals</div>
+      </div>
+    </div>
+
+    </div>
+    <!-- PROMO BANNERS -->
+    <div class="promo-banners">
+      <div class="promo-banner">
+        <div class="banner-card dark">
+          <div>
+            <div class="brand">Apple</div>
+            <div class="product">MacBook Pro 14"<br>Siêu mạnh với M5</div>
+          </div>
+          <div>
+            <div style="font-size:11px;color:#aaa">Đặt Mua Ngay - Giá chỉ từ</div>
+            <div class="price">41.990.000đ</div>
+          </div>
+          <div class="phone-img">💻</div>
+        </div>
+      </div>
+      <div class="promo-banner">
+        <div class="banner-card green">
+          <div>
+            <div class="chip">Mới về</div>
+            <div class="product">HONOR X6c</div>
+          </div>
+          <div>
+            <div style="font-size:11px;">Giá chỉ</div>
+            <div class="price">3.790.000đ</div>
+            <div class="cta">Mua ngay →</div>
+          </div>
+          <div class="phone-img">📱</div>
+        </div>
+      </div>
+      <div class="promo-banner">
+        <div class="banner-card orange">
+          <div>
+            <div class="chip">🔋 Pin 7000 mAh</div>
+            <div class="product">POCO M7</div>
+          </div>
+          <div>
+            <div style="font-size:11px;">Chỉ từ</div>
+            <div class="price">3.990.000đ</div>
+            <div class="cta">Khám phá →</div>
+          </div>
+          <div class="phone-img">📱</div>
+        </div>
+      </div>
+      <div class="promo-banner">
+        <div class="banner-card blue">
+          <div>
+            <div class="chip">Samsung</div>
+            <div class="product">Galaxy A07 | A17 5G</div>
+          </div>
+          <div>
+            <div style="font-size:11px;">Tết lên A - Giá từ</div>
+            <div class="price">2.790.000đ</div>
+            <div class="cta">Mua ngay →</div>
+          </div>
+          <div class="phone-img">📱</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DÀNH CHO BẠN -->
+    <div class="section">
+      <p> Dành cho bạn</p>
+
+      <div class="product" id="products"></div>
+    </div>
+
+
+    <!-- ĐIỆN THOẠI NỔI BẬT -->
+    <div class="section">
+      <p> Sản phẩm nổi bật</p>
+
+      <div class="product" id="featuredProducts"></div>
+    </div>
+  </div>
+</div>
+
+<!-- OVERLAY -->
+<div id="overlay" class="overlay" onclick="closeModal()"></div>
+
+<!-- MODAL -->
+<div id="productModal" class="modal-box">
+
+    <span class="close-btn" onclick="closeModal()">×</span>
+
+    <div class="modal-left">
+        <img id="modal-image" src="https://via.placeholder.com/300" />
+    </div>
+
+    <div class="modal-right">
+        <h2 id="modal-name"></h2>
+        <p id="modal-price"></p>
+
+        <label>Màu:</label>
+        <select id="modal-color">
+            <option>Đen</option>
+            <option>Trắng</option>
+            <option>Xanh</option>
+        </select>
+
+        <label>Dung lượng:</label>
+        <select id="modal-storage">
+            <option>128GB</option>
+            <option>256GB</option>
+            <option>512GB</option>
+        </select>
+
+        <label>% Pin:</label>
+        <select id="modal-battery">
+            <option>100%</option>
+            <option>99%</option>
+            <option>95%</option>
+        </select>
+
+        <label>Tình trạng:</label>
+        <select id="modal-condition">
+            <option>Like new</option>
+            <option>Đã qua sử dụng</option>
+        </select>
+
+        <button onclick="addToCart()">🛒 Thêm vào giỏ</button>
+    </div>
+
+</div>
+<!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-4" style="font-size: 12px;">
+    <div class="container-fluid px-5 text-md-left">
+    <div class="row">
+
+        <!-- Cột 1 -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold">PHONESTORET7.VN - ĐIỆN THOẠI CHÍNH HÃNG</h6>
+                <p>
+                PhoneStoreT7 được định hướng trở thành hệ thống thương mại điện tử
+                bán điện thoại chính hãng hàng đầu Việt Nam.
+                </p>
+                <p><strong>Showroom:</strong> 122 ngõ 90 Gia Quất - Long Biên - Hà Nội</p>
+                <p><strong>Hotline:</strong> 0775548188</p>
+        </div>
+
+        <!-- Cột 2 -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold">Về Chúng Tôi</h6>
+            <p><a href="#" class="text-white text-decoration-none">Giới thiệu</a></p>
+            <p><a href="#" class="text-white text-decoration-none">Điều khoản sử dụng</a></p>
+            <p><a href="#" class="text-white text-decoration-none">Chính sách bảo mật</a></p>
+            <p><a href="#" class="text-white text-decoration-none">Tin tức</a></p>
+            <p><a href="#" class="text-white text-decoration-none">Cơ hội việc làm</a></p>
+            <p><a href="#" class="text-white text-decoration-none">Liên hệ</a></p>
+        </div>
+
+        <!-- Cột 3 -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold">Khách Hàng</h6>
+            <p><a href="#" class="text-white text-decoration-none">Hướng dẫn mua hàng</a></p>
+            <p><a href="#" class="text-white text-decoration-none">Chính sách đổi trả</a></p>
+            <p><a href="#" class="text-white text-decoration-none">Chính sách bảo hành</a></p>
+            <p><a href="#" class="text-white text-decoration-none">Khách hàng thân thiết</a></p>
+            <p><a href="#" class="text-white text-decoration-none">Hướng dẫn chọn size</a></p>
+            <p><a href="#" class="text-white text-decoration-none">Chương trình khuyến mại</a></p>
+        </div>
+
+        <!-- Cột 4 -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold">Chứng Nhận</h6>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Dmca_logo.png/120px-Dmca_logo.png" width="120" class="mb-2" alt="DMCA">
+            <br>
+            <img src="https://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoSaleNoti.png" width="120" alt="Bộ Công Thương">
+        </div>
+    </div>
+
+        <hr class="mb-4">
+
+        <!-- Dòng cuối -->
+        <div class="row align-items-center">
+            <div class="col-md-7 col-lg-8">
+                <p class="mb-0">
+                © 2016 - 2025 PhoneStoreT7.vn | Công ty cổ phần đầu tư và công nghệ TrongTangroup
+                <br>Địa chỉ: 122 ngõ 90 Gia Quất - Long Biên - Hà Nội
+                </p>
+            </div>
+
+            <div class="col-md-5 col-lg-4 text-md-right">
+                <!-- Social icons -->
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                <br>
+                <!-- Thẻ thanh toán -->
+                <img src="https://img.icons8.com/color/48/visa.png"/>
+                <img src="https://img.icons8.com/color/48/mastercard.png"/>
+                <img src="https://img.icons8.com/color/48/paypal.png"/>
+                <img src="https://img.icons8.com/color/48/amex.png"/>
+            </div>
+        </div>
+    </div>
+</footer>
+  
+
+<!-- Js Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </body>
 </html>

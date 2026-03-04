@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  background: #f4f6f9;
+}
+
+/* ================= LEFT PANEL ================= */
+
+.left-panel {
+  width: 50%;
+  background: linear-gradient(160deg, #c8f5c8 0%, #a8e6a8 30%, #d4f5a0 60%, #f0f590 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.left-panel::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  bottom: -100px;
+  left: -100px;
+}
+
+/* LOGO */
+
+.logo-wrap {
+  background: white;
+  border-radius: 12px;
+  padding: 12px 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  margin-bottom: 28px;
+}
+
+.logo-icon {
+  background: #e63946;
+  color: white;
+  font-weight: 800;
+  font-size: 13px;
+  padding: 7px 9px;
+  border-radius: 6px;
+}
+
+.logo-text {
+  font-size: 16px;
+  font-weight: 800;
+  color: #1a1a2e;
+}
+
+/* MEMBER */
+
+.member-badge {
+  background: white;
+  border: 2px solid #1a1a2e;
+  border-radius: 20px;
+  padding: 5px 16px;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.member-title {
+  font-size: 42px;
+  font-weight: 900;
+  color: #1a7a3c;
+  text-align: center;
+  margin-bottom: 28px;
+  font-style: italic;
+}
+
+/* BENEFITS */
+
+.benefits-box {
+  background: #1a7a3c;
+  border-radius: 16px;
+  padding: 24px 28px;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 24px;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+  color: white;
+  font-size: 14px;
+}
+
+.benefit-item:last-child {
+  margin-bottom: 0;
+}
+
+.benefit-icon {
+  font-size: 18px;
+}
+
+/* CTA */
+
+.cta-btn {
+  border: 2px solid #1a1a2e;
+  background: transparent;
+  font-weight: 800;
+  padding: 12px 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cta-btn:hover {
+  background: #1a1a2e;
+  color: white;
+}
+
+/* ================= RIGHT PANEL ================= */
+
+.right-panel {
+  width: 50%;
+  background: white;
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-panel h1 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.right-panel p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* TAB */
+
+.auth-tab {
+  display: flex;
+  gap: 30px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 25px;
+}
+
+.auth-tab button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: #888;
+  padding-bottom: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.auth-tab button.active {
+  color: #1a7a3c;
+}
+
+.auth-tab button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #1a7a3c;
+  border-radius: 3px;
+}
+
+/* FORM */
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeIn 0.3s ease;
+}
+
+.auth-form input {
+  padding: 15px;
+  border-radius: 8px;
+  border: 1.5px solid #ddd;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.auth-form input:focus {
+  border-color: #1a7a3c;
+  outline: none;
+}
+
+.btn-main {
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  background: #1a7a3c;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-main:hover {
+  background: #145e2e;
+}
+
+/* DIVIDER */
+
+.divider {
+  text-align: center;
+  margin: 25px 0;
+  color: #bbb;
+  font-size: 13px;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 35%;
+  height: 1px;
+  background: #eee;
+}
+
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+/* SOCIAL */
+
+.social-btn {
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.btn-zalo { background: #0068ff; color: white; }
+.btn-google { background: #f1f1f1; }
+.btn-facebook { background: #1877f2; color: white; }
+
+.policy-text {
+  font-size: 12px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  body { flex-direction: column; }
+  .left-panel, .right-panel { width: 100%; }
+  .right-panel { padding: 40px 24px; }
+}
+.mascot-area {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 40px;
+
+  pointer-events: none; /* tránh click trúng */
+}
+
+/* Icon chung */
+.mascot-area div {
+  opacity: 0.6;
+  filter: blur(1px);
+  transition: all 0.3s ease;
+}
+
+/* Sóc */
+.mascot {
+  font-size: 120px;
+  opacity: 0.8;
+  filter: blur(0.5px);
+}
+
+/* Quà */
+.gift {
+  font-size: 70px;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Coin */
+.coin {
+  font-size: 50px;
+  animation: float 3.5s ease-in-out infinite;
+}
+
+/* Animation nổi nhẹ */
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+.gift:first-child { transform: scale(0.8); opacity: 0.4; }
+.gift:last-child { transform: scale(0.9); opacity: 0.5; }
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;          /* khoảng cách icon và chữ */
+}
+
+.social-btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.hidden {
+  display: none !important;
+}
